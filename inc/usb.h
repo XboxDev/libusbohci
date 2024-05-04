@@ -1695,7 +1695,7 @@ typedef struct utr_t
     DEV_REQ_T   setup;                /*!< buffer for setup packet               \hideinitializer */
     EP_INFO_T   *ep;                  /*!< associated endpoint                   \hideinitializer */
     uint8_t     *buff;                /*!< transfer buffer                       \hideinitializer */
-    uint8_t     bIsTransferDone;      /*!< tansfer done?                         \hideinitializer */
+    volatile uint8_t bIsTransferDone; /*!< tansfer done?                         \hideinitializer */
     uint32_t    data_len;             /*!< length of data to be transferred      \hideinitializer */
     uint32_t    xfer_len;             /*!< length of transferred data            \hideinitializer */
     uint8_t     bIsoNewSched;         /*!< New schedule isochronous transfer     \hideinitializer */
