@@ -259,6 +259,8 @@ static void ohci_shutdown(void)
 #ifndef OHCI_PER_PORT_POWER
     _ohci->HcRhStatus = USBH_HcRhStatus_LPS_Msk;
 #endif
+    uint32_t HcControl = _ohci->HcControl;
+    _ohci->HcControl = HcControl & USBH_HcControl_CBSR_Msk;
 }
 
 
