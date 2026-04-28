@@ -175,7 +175,7 @@ void usbh_ehci_irq_deinit(void);
 //Allocate a contiguous memory pool that the ohci hardware can access.
 void *usbh_allocate_memory_pool(uint32_t size, uint32_t boundary);
 //Free a contigious memory pool
-void *usbh_free_memory_pool(void *memory_pool);
+void usbh_free_memory_pool(void *memory_pool);
 //Return the system tick count in 10ms blocks
 uint32_t usbh_get_ticks(void);
 //Pause execution for the required number of micrseconds.
@@ -185,7 +185,7 @@ void *usbh_dma_to_virt(void *physical_address);
 //Convert a physical address from the ohci hardware to a virtual address.
 void *usbh_virt_to_dma(void *virtual_address);
 //Debug printer output.
-void usbh_sysprintf(const char *format, ...);
+void usbh_sysprintf(const char *format);
 
 /*------------------------------------------------------------------*/
 /*                                                                  */
@@ -315,6 +315,3 @@ extern uint32_t  usbh_memory_used(void);
 #endif  /* _USBH_LIB_H_ */
 
 /*** (C) COPYRIGHT 2017 Nuvoton Technology Corp. ***/
-
-
-
